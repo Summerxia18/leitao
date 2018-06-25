@@ -1,3 +1,11 @@
+/*重置公共样式*/
+a:link,
+a:visited,
+a:hover,
+a:active{
+  text-decoration: none;
+}
+
 
 /*登录页*/
 .body_bg{
@@ -15,3 +23,94 @@
   line-height: 50px;
   font-size:20px;
 }
+/*首页*/
+
+/*侧边栏样式*/
+.lt-aside{
+  width: 180px;
+  /*固定定位的盒子高度集成浏览器可视区域*/
+  height: 100%;
+  background-color: #222D32;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index:999;
+}
+.lt-aside .brand{
+  height: 50px;
+  background-color: #367FA9;
+}
+.lt-aside .brand a{
+  color:#fff;
+  font-size:25px;
+  text-align:center;
+  line-height: 50px;
+  display: block;
+}
+.lt-aside .user{
+  height: 180px;
+  padding-top: 30px;
+}
+.lt-aside .user img{
+  width: 80px;
+  height: 80px;
+  border-radius:50%;
+  display: block;
+  margin:0 auto;
+}
+.lt-aside .user p{
+  color:#fff;
+  font-size:18px;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+}
+.lt-aside .nav ul{
+  padding: 0;
+  margin: 0;
+}
+.lt-aside .nav a{
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding-left:40px;
+  color:#fff;
+  border-left: 3px solid transparent;
+}
+.lt-aside .nav a.current{
+  background-color: #1D1F21;
+  border-left: 3px solid #006699;
+}
+.lt-aside .nav span{
+  margin-left:5px;
+}
+.lt-aside .nav .child a{
+  padding-left:54px;
+}
+/*首页右边主体部分*/
+.lt-main{
+  padding-top:50px;
+  padding-left: 180px;
+}
+.lt-main .top-bar{
+  /*定位的元素必须设置宽高*/
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #3C8DBC;
+  padding-left:180px;
+}
+.lt-main .top-bar a{
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  font-size:16px;
+  text-align:center;
+  line-height: 50px;
+}
+.lt-main .breadcrumb{
+  margin-top: 20px;
+}
+
