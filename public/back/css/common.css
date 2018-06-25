@@ -6,6 +6,9 @@ a:active{
   text-decoration: none;
 }
 
+.red{
+  color:#A94442;
+}
 
 /*登录页*/
 .body_bg{
@@ -35,6 +38,10 @@ a:active{
   left: 0;
   top: 0;
   z-index:999;
+  transition:all 1s;
+}
+.lt-aside.hideAside{
+  left:-180px;
 }
 .lt-aside .brand{
   height: 50px;
@@ -91,6 +98,10 @@ a:active{
 .lt-main{
   padding-top:50px;
   padding-left: 180px;
+  transition:all 1s;
+}
+.lt-main.hideAside{
+  padding-left:0px;
 }
 .lt-main .top-bar{
   /*定位的元素必须设置宽高*/
@@ -101,6 +112,10 @@ a:active{
   left: 0;
   background-color: #3C8DBC;
   padding-left:180px;
+  transition: all 1s;
+}
+.lt-main .top-bar.hideAside{
+  padding-left:0;
 }
 .lt-main .top-bar a{
   width: 50px;
