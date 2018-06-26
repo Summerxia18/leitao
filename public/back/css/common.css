@@ -129,3 +129,10 @@ a:active{
   margin-top: 20px;
 }
 
+/*设置图标容器的宽高*/
+.chart1,
+.chart2{
+  width: 48%;
+  height: 400px;
+}
+
