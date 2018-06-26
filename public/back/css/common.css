@@ -10,6 +10,13 @@ a:active{
   color:#A94442;
 }
 
+/*设置表格内容水平垂直居中*/
+.table-bordered.table th,
+.table-bordered.table td
+  {
+  vertical-align: middle;
+  text-align:center;
+}
 /*登录页*/
 .body_bg{
   background-color: #222d32;
