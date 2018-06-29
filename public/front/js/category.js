@@ -32,7 +32,7 @@ $(function(){
             data:{id:id},
             dataType:'json',
             success:function(info){
-                console.log(info);
+                // console.log(info);
                 $('.brandlist').html(template('tmp',info))
             }
         })
