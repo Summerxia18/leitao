@@ -1,11 +1,16 @@
 
 html,body{
     height: 100%;
+    background-color: #fff;
 }
 ul{
     list-style:none;
     padding: 0;
     margin: 0;
+}
+img{
+    display: block;
+    width: 100%;
 }
 
 .lt-container{
@@ -13,7 +18,6 @@ width: 100%;
 height: 100%;
 max-width:640px;
 min-width:320px;
-background-color: pink;
 margin:0 auto;
 position: relative;
 padding-top: 45px;
@@ -75,7 +79,7 @@ padding-bottom: 55px;
 .lt-center{
     width: 100%;
     height: 100%;
-    background-color: orange;
+    position: relative;
 }
 .lt-footer ul li{
     float: left;
@@ -95,4 +99,6 @@ padding-bottom: 55px;
 }
 .lt-footer ul li a p{
     COLOR:#FFF;
+    padding: 0;
+    margin: 0;
 }
