@@ -1,0 +1,44 @@
+.lt-center .brand-nav{
+    width: 90px;
+    height: 100%;
+    background-color:orange;
+    float: left;
+    position: relative;
+}
+.lt-center .brand-nav a{
+    display: block;
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    color: #666;
+    background-color: #E3E4E5;
+    border-right:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+}
+.lt-center .brand-nav a.current{
+    background-color: #fff;
+    border-right:none;
+}
+.lt-center .brand-detail{
+    height: 100%;
+    overflow: hidden;
+}
+.brand-detail{
+    position: relative;
+}
+.brand-detail .brandlist{
+    padding: 10px;
+}
+.brand-detail li{
+    width: 33.3%;
+    float: left;
+}
+.brand-detail li a{
+    display: block;
+    text-align:center;
+}
+.brand-detail li a img{
+    width: 70px;
+    height: 50px;
+    margin:0 auto;
+}

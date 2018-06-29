@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="lib/mui/css/mui.css">
     <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/category.css">
 
 </head>
 <body>
@@ -29,7 +30,35 @@
                 <a href="search.html"><i class="fa fa-search"></i></a>
             </div>    
         </div>
-        <div class="lt-center"></div>
+        <div class="lt-center">
+            <div class="brand-nav mui-text-center">
+                <!-- 区域滚动 -->
+                <div class="mui-scroll-wrapper">
+                        <div class="mui-scroll">
+                            <!--这里放置真实显示的DOM内容-->
+                            <ul id="category">
+                               <!-- 挖个坑 -->
+                            </ul>
+                            
+                        </div>
+                    </div>
+
+
+
+               
+            </div>
+            <div class="brand-detail">
+                <!-- 区域滚动 -->
+                <div class="mui-scroll-wrapper">
+                        <div class="mui-scroll">
+                            <!--这里放置真实显示的DOM内容-->
+                            <ul class="brandlist mui-clearfix">
+                           <!-- 挖个坑 -->
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+        </div>
         <div class="lt-footer">
             <ul class="mui-clearfix">
                 <li>
@@ -60,5 +89,36 @@
         </div>
     </div>
     <script src="lib/mui/js/mui.js"></script>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/category.js"></script>
+
+    <!-- 一级分类渲染模版 -->
+    <script type="text/html" id="catetmp">
+        {{each rows v i}}
+        <li>
+            <a href="#" data-id="{{v.id}}" class="{{i===0?'current':''}}">{{v.categoryName}}</a>
+       </li>
+
+        {{/each}}
+    </script>
+
+    <!-- 二级分类的渲染模版 -->
+    <script type="text/html" id="tmp">
+        {{if rows.length===0}}
+        <p>没有更多分类信息了</p>
+        {{/if}}
+
+    {{each rows v i}}
+        <li>
+            <a href="#">
+                <img src="{{v.brandLogo}}" alt="">
+                <p>{{v.brandName}}</p>
+            </a>
+        </li>
+
+    {{/each}}
+    </script>
 </body>
 </html>
