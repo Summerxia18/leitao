@@ -1,0 +1,98 @@
+
+html,body{
+    height: 100%;
+}
+ul{
+    list-style:none;
+    padding: 0;
+    margin: 0;
+}
+
+.lt-container{
+width: 100%;
+height: 100%;
+max-width:640px;
+min-width:320px;
+background-color: pink;
+margin:0 auto;
+position: relative;
+padding-top: 45px;
+padding-bottom: 55px;
+}
+.lt-header{
+    height: 45px;
+    width: 100%;
+    /* 移动端一般头部用固定定位做 */
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #006699;
+    padding: 0 45px;
+}
+.lt-header .left,
+.lt-header .right{
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 0;
+}
+.lt-header .left{
+    left: 0;
+}
+.lt-header .right{
+    right: 0;
+}
+.lt-header a{
+    display: block;
+    width: 45px;
+    height: 45px;
+    text-align:center;
+    line-height: 45px;
+    color:#fff;
+    font-size: 20px;
+}
+.lt-header .middle{
+    width: 100%;
+    height: 45px;
+}
+.lt-header .middle h3{
+    text-align:center;
+    height: 45px;
+    line-height: 45px;
+    margin: 0;
+    font-weight:normal;
+    font-size: 20px;
+    color:#fff;
+}
+.lt-footer{
+    height: 55px;
+    width: 100%;
+    background-color: #006699;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.lt-center{
+    width: 100%;
+    height: 100%;
+    background-color: orange;
+}
+.lt-footer ul li{
+    float: left;
+    width: 25%;
+    height: 55px;
+    text-align:center;
+}
+.lt-footer ul li a{
+    display: block;
+    height: 100%;
+    padding-top: 6px;
+    color:#fff;
+}
+.lt-footer ul li.current a,
+.lt-footer ul li.current p{
+    color:orange;
+}
+.lt-footer ul li a p{
+    COLOR:#FFF;
+}
