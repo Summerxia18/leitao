@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="lib/mui/css/mui.css">
     <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/searchlist.css">
 
 </head>
 <body>
@@ -28,13 +28,55 @@
             </div>
         </div>
         <div class="lt-center">
+            <!-- 添加滚动区域 -->
+            <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <!--这里放置真实显示的DOM内容-->
+                        
             <div class="lt-search">
-                <input type="text" placeholder="请输入搜索关键字">
-                <button class="mui-btn mui-btn-primary btnSearch">搜索</button> 
+                    <input type="text" placeholder="请输入搜索关键字">
+                    <button class="mui-btn mui-btn-primary btnSearch">搜索</button> 
+                </div>
+    
+                <div class="lt-sort">
+                    <ul class="mui-clearfix">
+                        <li>
+                            <a href="#">
+                                <span>上架时间</span>
+                                <i class="fa fa-angle-down"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-type="price" href="#">
+                                <span>价格</span>
+                                <i class="fa fa-angle-down"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-type="num" href="#">
+                                <span>库存</span>
+                                <i class="fa fa-angle-down"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>折扣</span>
+                                <i class="fa fa-angle-down"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 商品区 -->
+            <div class="lt-products">
+                <!-- 挖个坑 -->
             </div>
-            
-          
+                    </div>
+             </div>
 
+
+
+          
         </div>
         <div class="lt-footer">
             <ul class="mui-clearfix">
@@ -66,7 +108,34 @@
         </div>
     </div>
     <script src="lib/mui/js/mui.js"></script>
-    <script src="lib/zepto//zepto.min.js"></script>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/searchlist.js"></script>
+
+    <!-- 渲染模版 -->
+    <script type="text/html" id="tmp">
+
+    {{if data.length > 0}}   
+    <ul class="mui-clearfix">
+            {{each data v i}}
+            <li>
+                <a href="#">
+                    <img src="{{v.pic[0]?v.pic[0].picAddr:"images/none.png"}}" alt="">
+                    <p class="mui-ellipsis-2">{{v.proName}} </p>
+                   <div class="priceBox">
+                        <span class="price">&yen;{{v.price}}</span>
+                        <span class="oldprice">&yen;{{v.oldPrice}}</span>
+                   </div>
+                    <button class="mui-btn mui-btn-primary buybtn">立即购买</button>
+                </a>
+            </li>
+            {{/each}}
+    </ul>
+    {{else}}
+    <p>没有更多商品信息</p>
+    {{/if}}
+    
+    </script>
 </body>
 </html>

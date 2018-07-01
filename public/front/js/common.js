@@ -14,3 +14,22 @@ $(function(){
         interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
     });
 })
+
+
+// 封装了一个获取解析地址的方法
+
+function getSearch(attr){
+    var search = location.search;//"?key=2&age=18"
+    search = decodeURI(search);
+    search = search.slice(1);
+    var arr = search.split('&');// ["key=2", "name=zs"]
+    var obj = {};
+    arr.forEach(function(v,i){
+        var key = v.split('=')[0];
+        var value=v.split('=')[1];
+        obj[key]=value;
+    })
+    
+     return obj[attr];
+
+}
