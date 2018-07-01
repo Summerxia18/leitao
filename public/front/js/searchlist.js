@@ -7,6 +7,7 @@ $(function(){
     render();
 
     function render(){
+        $('.lt-products').html('<div class="loading"></div>');
         var params = {};
         params. proName=$('input').val();
         params.page=1;
@@ -22,11 +23,8 @@ $(function(){
             params[sortName]=sortValue;
         }
         // console.log(params);
-        
-        
-
-
-        $.ajax({
+        //模拟网络延迟
+        setTimeout(function(){$.ajax({
             type:'get',
             url:'/product/queryProduct',
             data:params,
@@ -35,7 +33,8 @@ $(function(){
                 // console.log(info);
                 $('.lt-products').html(template('tmp',info))
             }
-        })
+        })},500)
+        
     }
 
     //2-点击搜索按钮,获取input的值,发送ajax给后台请求数据,进行模版渲染
