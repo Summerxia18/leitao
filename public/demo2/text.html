@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+    <script>
+     var startX=0;
+     var distanceX=0;
+     window.addEventListener('touchstart',function(e){
+         startX = e.touches[0].pageX;
+     })   
+     window.addEventListener('touchmove',function(e){
+         var moveX = e.touches[0].pageX;
+         distanceX = moveX -startX;
+         console.log(distanceX);
+         
+     })  
+    </script>
+    
+</body>
+</html>

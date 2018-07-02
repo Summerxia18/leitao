@@ -34,7 +34,7 @@
                         <!--这里放置真实显示的DOM内容-->
                         
             <div class="lt-search">
-                    <input type="text" placeholder="请输入搜索关键字">
+                    <input type="text" class="search-btn" placeholder="请输入搜索关键字">
                     <button class="mui-btn mui-btn-primary btnSearch">搜索</button> 
                 </div>
     
@@ -71,8 +71,8 @@
             <div class="lt-products">
                 <!-- 挖个坑 -->
             </div>
-                    </div>
-             </div>
+    </div>
+ </div>
 
 
 
@@ -111,7 +111,7 @@
     <script src="lib/zepto/zepto.min.js"></script>
     <script src="lib/artTemplate/template-web.js"></script>
     <script src="js/common.js"></script>
-    <script src="js/searchlist.js"></script>
+    <script src="js/searchlist1.js"></script>
 
     <!-- 渲染模版 -->
     <script type="text/html" id="tmp">
@@ -120,7 +120,7 @@
     <ul class="mui-clearfix">
             {{each data v i}}
             <li>
-                <a href="#">
+                <a href="#" data-id="{{v.id}}">
                     <img src="{{v.pic[0]?v.pic[0].picAddr:"images/none.png"}}" alt="">
                     <p class="mui-ellipsis-2">{{v.proName}} </p>
                    <div class="priceBox">
